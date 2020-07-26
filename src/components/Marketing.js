@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 
 export const Marketing = () => {
   return (
-    <Box p={4} display={{ md: "flex" }}>
+    <Box py={4} display={{ md: "flex" }}>
       <Box w={{ md: 40 }} flexShrink="0">
         <Plane />
       </Box>

@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { DarkModeSwitch } from "./DarkModeSwitch"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -18,7 +19,7 @@ const Header = ({ siteTitle }) => (
     >
       <h1 style={{ margin: 0 }}>
         <Link
-          to="/"
+          to="/test"
           style={{
             color: `white`,
             textDecoration: `none`,
@@ -27,6 +28,7 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <DarkModeSwitch />
     </div>
   </header>
 )
