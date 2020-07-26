@@ -1,19 +1,15 @@
 import React from "react"
-import { Link as ChakraLink, Text, Box, Image } from "@chakra-ui/core"
-import plane from "../images/plane.png"
+import { Link as ChakraLink, Text, Box } from "@chakra-ui/core"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
 export const Marketing = () => {
   return (
     <Box p={4} display={{ md: "flex" }}>
-      <Box flexShrink="0">
-        {/* <Image
-          rounded="lg"
-          width={{ md: 40 }}
-          src={plane}
-          alt="Woman paying for a purchase"
-        /> */}
-        <img src={plane} />
+      <Box w={{ md: 40 }} flexShrink="0">
+        <Plane />
       </Box>
+
       <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
         <Text
           fontWeight="bold"
@@ -40,5 +36,26 @@ export const Marketing = () => {
         </Text>
       </Box>
     </Box>
+  )
+}
+
+const Plane = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "plane.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 767) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <Img
+      imgStyle={{ borderRadius: ".5rem" }}
+      fluid={data.placeholderImage.childImageSharp.fluid}
+    />
   )
 }
