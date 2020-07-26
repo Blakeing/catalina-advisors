@@ -6,12 +6,13 @@ export const Marketing = () => {
   return (
     <Box p={4} display={{ md: "flex" }}>
       <Box flexShrink="0">
-        <Image
+        {/* <Image
           rounded="lg"
           width={{ md: 40 }}
           src={plane}
           alt="Woman paying for a purchase"
-        />
+        /> */}
+        <img src={plane} />
       </Box>
       <Box mt={{ base: 4, md: 0 }} ml={{ md: 6 }}>
         <Text
