@@ -1,9 +1,8 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import { DarkModeSwitch } from "./DarkModeSwitch"
 import { ChakraDrawer } from "../components/ChakraDrawer"
-import { useDisclosure, Button, Flex } from "@chakra-ui/core"
+import { useDisclosure, Button } from "@chakra-ui/core"
 
 const Header = ({ siteTitle }) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -35,11 +34,11 @@ const Header = ({ siteTitle }) => {
         <Button ref={btnRef} variantColor="teal" onClick={onOpen}>
           Open
         </Button>
-        <DarkModeSwitch />
       </header>
     </>
   )
 }
+
 Header.propTypes = {
   siteTitle: PropTypes.string,
 }

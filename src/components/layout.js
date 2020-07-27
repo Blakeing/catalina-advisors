@@ -12,6 +12,7 @@ import "./layout.css"
 
 import Header from "./header"
 import { Container } from "./Container"
+import { DarkModeSwitch } from "./DarkModeSwitch"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -40,6 +41,7 @@ const Layout = ({ children }) => {
         © {new Date().getFullYear()}, Built with&nbsp;
         <a href="https://www.gatsbyjs.org">Gatsby</a>
       </footer>
+      <DarkModeSwitch />
     </>
   )
 }
