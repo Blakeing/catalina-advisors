@@ -11,6 +11,7 @@ import {
   Input,
   Button,
 } from "@chakra-ui/core"
+import { Link } from "gatsby"
 
 export const ChakraDrawer = ({ isOpen, onClose, btnRef }) => {
   return (
@@ -24,9 +25,27 @@ export const ChakraDrawer = ({ isOpen, onClose, btnRef }) => {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Create your account</DrawerHeader>
+          <DrawerHeader>Main Menu</DrawerHeader>
           <DrawerBody>
-            <Input placeholder="Type here..." />
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/about">About </Link>
+              </li>
+              <li>
+                <Link to="/services">Services </Link>
+              </li>
+
+              <li>
+                <Link to="/blog">Blog</Link>
+              </li>
+
+              <li>
+                <Link to="/contact">Contact </Link>
+              </li>
+            </ul>
           </DrawerBody>
           <DrawerFooter>
             <Button variant="outline" mr={3} onClick={onClose}>

@@ -37,9 +37,10 @@ const Headers = () => {
                     textTransform="capitalize"
                     href="#"
                     aria-label="Home"
-                    fontSize="4rem"
+                    fontSize={{ base: "3rem", md: "4rem" }}
+                    fontWeight="600"
                   >
-                    Catalina
+                    <Link to="/">CATALINA</Link>
                     <br />
                   </Box>
                   <Box
@@ -47,10 +48,11 @@ const Headers = () => {
                     pl="2"
                     mt="0"
                     lineHeight="1"
-                    fontSize="1.85rem"
+                    fontSize={{ base: "1.5rem", md: "1.85rem" }}
                     textTransform="capitalize"
+                    fontWeight="600"
                   >
-                    Advisors
+                    <Link to="/">ADVISORS</Link>
                   </Box>
                 </Box>
               </Flex>
