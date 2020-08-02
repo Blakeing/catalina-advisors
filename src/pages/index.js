@@ -6,6 +6,7 @@ import { ChakraDrawer } from "../components/ChakraDrawer"
 import { Box, Flex, useDisclosure, Button, Image } from "@chakra-ui/core"
 import { Link } from "gatsby"
 import Headers from "../components/headers"
+import Div100vh from "react-div-100vh"
 
 function IndexPage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -17,6 +18,7 @@ function IndexPage() {
         keywords={[`gatsby`, `tailwind`, `react`, `tailwindcss`]}
         title="Test"
       />
+
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
       <Box pos="relative" h="100vh" overflow="hidden" bg="transparent">
         <Image
@@ -28,12 +30,13 @@ function IndexPage() {
           src={planes}
         />
 
-        <Box mx="auto" maxW="1280px" zIndex={2}>
+        <Box mx="auto" maxW="1500px" zIndex={2}>
           <Headers />
           <Flex
+            as={Div100vh}
             h={{
-              base: "calc(100% - 6rem)",
-              sm: "calc(100% - 7.25rem)",
+              base: "calc(100rvh - 6rem)",
+              sm: "calc(100rvh - 7.25rem)",
             }}
             mx="auto"
             px={{ base: 4, lg: 8 }}
