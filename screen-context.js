@@ -4,15 +4,15 @@ const ScreenContext = React.createContext({})
 
 exports.ScreenContext = ScreenContext
 
-const ScreenProvider = props => {
-  const getWindowDimensions = () => {
-    const { innerWidth: width, innerHeight: height } = window
-    return {
-      width,
-      height,
-    }
+const getWindowDimensions = () => {
+  const { innerWidth: width, innerHeight: height } = window
+  return {
+    width,
+    height,
   }
+}
 
+const ScreenProvider = props => {
   const [windowDimensions, setWindowDimensions] = React.useState(
     getWindowDimensions()
   )
