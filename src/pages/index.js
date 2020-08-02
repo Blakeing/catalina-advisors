@@ -23,7 +23,7 @@ function IndexPage() {
 
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
       <Box
-        h={msg.windowDimensions.height}
+        h={msg.windowSize.height}
         pos="relative"
         overflow="hidden"
         bg="transparent"
@@ -40,7 +40,7 @@ function IndexPage() {
         <Box mx="auto" maxW="1500px" zIndex={2}>
           <Headers />
           <Flex
-            h={msg.windowDimensions.height}
+            h={msg.windowSize.height}
             mx="auto"
             px={{ base: 4, lg: 8 }}
             maxW="1280px"
