@@ -40,7 +40,7 @@ function IndexPage() {
         <Box mx="auto" maxW="1500px" zIndex={2}>
           <Headers />
           <Flex
-            h={msg.windowSize.height}
+            h="100%"
             mx="auto"
             px={{ base: 4, lg: 8 }}
             maxW="1280px"
