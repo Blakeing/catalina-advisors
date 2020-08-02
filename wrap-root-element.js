@@ -1,6 +1,5 @@
 const React = require("react")
-if (typeof window !== `undefined`) {
-  const { Provider } = require("./screen-context")
-}
+const { Provider } =
+  typeof window !== `undefined` ? require("./screen-context") : undefined
 
 module.exports = ({ element }) => <Provider>{element}</Provider>
