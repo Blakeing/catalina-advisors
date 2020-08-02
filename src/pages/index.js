@@ -20,13 +20,7 @@ function IndexPage() {
       />
 
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-      <Box
-        as={Div100vh}
-        minHeight="100vh"
-        pos="relative"
-        overflow="hidden"
-        bg="transparent"
-      >
+      <Box as={Div100vh} pos="relative" overflow="hidden" bg="transparent">
         <Image
           height={{ base: "auto", xl: "100%" }}
           pos="absolute"
@@ -40,7 +34,6 @@ function IndexPage() {
           <Headers />
           <Flex
             as={Div100vh}
-            minHeight="100vh"
             mx="auto"
             px={{ base: 4, lg: 8 }}
             maxW="1280px"
