@@ -4,18 +4,18 @@ const ScreenContext = React.createContext({})
 
 exports.ScreenContext = ScreenContext
 
-function getWindowDimensions() {
-  const { innerWidth: width, innerHeight: height } = window
-  return {
-    width,
-    height,
-  }
-}
-
 const ScreenProvider = props => {
   const [windowDimensions, setWindowDimensions] = React.useState(
     getWindowDimensions()
   )
+
+  function getWindowDimensions() {
+    const { innerWidth: width, innerHeight: height } = window
+    return {
+      width,
+      height,
+    }
+  }
 
   React.useEffect(() => {
     function handleResize() {
