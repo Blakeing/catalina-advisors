@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useContext } from "react"
 import SEO from "../components/seo"
 import planes from "../images/planes.png"
 import { ChakraDrawer } from "../components/ChakraDrawer"
@@ -7,18 +7,12 @@ import { Box, Flex, useDisclosure, Button, Image } from "@chakra-ui/core"
 import { Link } from "gatsby"
 import Headers from "../components/headers"
 import Div100vh from "react-div-100vh"
+import { ScreenContext } from "../../screen-context"
 
 function IndexPage() {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
-
-  useEffect(() => {
-    window.onresize = function () {
-      document.body.height = window.innerHeight
-    }
-
-    window.onresize() // called to initially set the height.
-  }, [])
+  const msg = useContext(ScreenContext)
 
   return (
     <>
@@ -28,7 +22,12 @@ function IndexPage() {
       />
 
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-      <Box as={Div100vh} pos="relative" overflow="hidden" bg="transparent">
+      <Box
+        h={msg.windowDimensions.height}
+        pos="relative"
+        overflow="hidden"
+        bg="transparent"
+      >
         <Image
           height={{ base: "auto", xl: "100%" }}
           pos="absolute"
@@ -41,7 +40,7 @@ function IndexPage() {
         <Box mx="auto" maxW="1500px" zIndex={2}>
           <Headers />
           <Flex
-            as={Div100vh}
+            h={msg.windowDimensions.height}
             mx="auto"
             px={{ base: 4, lg: 8 }}
             maxW="1280px"
