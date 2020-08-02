@@ -34,10 +34,6 @@ function IndexPage() {
           <Headers />
           <Flex
             as={Div100vh}
-            h={{
-              base: "calc(100rvh - 6rem)",
-              sm: "calc(100rvh - 7.25rem)",
-            }}
             mx="auto"
             px={{ base: 4, lg: 8 }}
             maxW="1280px"
