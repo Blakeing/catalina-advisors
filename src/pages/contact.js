@@ -1,9 +1,16 @@
 import React from "react"
-import { Box, Flex, Image, Input, Button } from "@chakra-ui/core"
+import { Box, Flex, Image, Input, Button, Stack } from "@chakra-ui/core"
 import Headers from "../components/headers"
 import Typing from "../images/fa-contact.jpg"
 import Form from "../images/fa-contact-form.jpg"
-import { Textarea } from "@chakra-ui/core"
+import {
+  Textarea,
+  PseudoBox,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  FormHelperText,
+} from "@chakra-ui/core"
 
 const Contact = () => {
   return (
@@ -84,15 +91,43 @@ const Contact = () => {
             <br />
             Consulation
           </Box>
-          <Box p="2rem" bg="gray.500">
-            <Input mb={5} placeholder="Basic usage" />
-            <Input mb={5} placeholder="Basic usage" />
-            <Textarea mb={5} placeholder="Here is a sample placeholder" />
-            <Flex justifyContent="flex-end">
-              <Button px={4} py={2}>
-                Send Message
-              </Button>
-            </Flex>
+
+          <Box as="form">
+            <Stack spacing={4}>
+              <FormControl>
+                <FormLabel htmlFor="email">Name</FormLabel>
+                <Input
+                  type="email"
+                  id="email"
+                  placeholder="Here is a sample placeholder"
+                  aria-describedby="email-helper-text"
+                />
+              </FormControl>
+
+              <FormControl>
+                <FormLabel htmlFor="email">Email address</FormLabel>
+                <Input
+                  type="email"
+                  id="email"
+                  placeholder="Here is a sample placeholder"
+                  aria-describedby="email-helper-text"
+                />
+              </FormControl>
+
+              <FormControl>
+                <FormLabel htmlFor="email">Comments</FormLabel>
+                <Textarea
+                  variant="outline"
+                  mb={5}
+                  placeholder="Here is a sample placeholder"
+                />
+              </FormControl>
+              <Flex justifyContent="flex-end">
+                <Button px={4} py={2}>
+                  Send Message
+                </Button>
+              </Flex>
+            </Stack>
           </Box>
         </Box>
         <Box py="1.75rem" w={{ base: "100%", lg: "47.25%" }}>
