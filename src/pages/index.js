@@ -22,12 +22,7 @@ function IndexPage() {
       />
 
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-      <Box
-        h={msg.windowSize.height}
-        pos="relative"
-        overflow="hidden"
-        bg="transparent"
-      >
+      <Box h={msg.height} pos="relative" overflow="hidden" bg="transparent">
         <Image
           height={{ base: "auto", xl: "100%" }}
           pos="absolute"
@@ -40,7 +35,7 @@ function IndexPage() {
         <Box mx="auto" maxW="1500px" zIndex={2}>
           <Headers />
           <Flex
-            h="100%"
+            h={`calc(${msg.height}px - 117px)`}
             mx="auto"
             px={{ base: 4, lg: 8 }}
             maxW="1280px"
@@ -59,17 +54,6 @@ function IndexPage() {
                 <br />
                 <span className="text-gray-700">Finance Advisors</span>
               </Box>
-              {/* <Box
-                as="p"
-                mt={{ base: 3, md: 5 }}
-                mx="0"
-                maxW={{ base: "100%", lg: "50%" }}
-                fontSize={{ base: "1rem", sm: "1.125rem", md: "1.25rem" }}
-              >
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat aliqua.
-              </Box> */}
               <Button
                 mt={{ base: 5, md: 8 }}
                 d="inline-flex"
