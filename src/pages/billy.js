@@ -36,10 +36,13 @@ function IndexPage() {
           <Box mx="auto" maxW="1500px" zIndex={2}>
             <Headers />
             <Flex
-              h={{
-                base: `calc(${msg.height}px - 96px)`,
-                md: `calc(${msg.height}px - 117px)`,
-              }}
+              // h={{
+              //   base: `calc(${msg.height}px - 96px)`,
+              //   md: `calc(${msg.height}px - 117px)`,
+              // }}
+              pos="absolute"
+              bottom={{ base: "15rem", md: "30rem", lg: "20rem", xl: "20rem" }}
+              left={{ base: "0", md: "0", lg: "13rem", xl: "13rem" }}
               mx="auto"
               px={{ base: 4, lg: 8 }}
               maxW="1280px"
