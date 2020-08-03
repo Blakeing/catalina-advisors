@@ -25,25 +25,30 @@ const Contact = () => {
           fontWeight="600"
           maxW="1080px"
           mx="auto"
-          fontSize="6rem"
+          fontSize={{ base: "3rem", md: "6rem" }}
         >
           Contact Us
         </Box>
       </Flex>
-      <Flex maxW="1080px" mx="auto" as="h1" py="3rem" px={{ base: "1rem" }}>
+      <Flex
+        flexWrap="wrap"
+        maxW="1080px"
+        mx="auto"
+        as="h1"
+        py="3rem"
+        px={{ base: "1rem" }}
+      >
         <Box mr="5.5%" w={{ base: "100%", lg: "36.7%;" }}>
           <p>(255) 352-6258</p>
-          <div>
-            <p>
-              <a href="mailto:hello@divifinancialadvisor.com&nbsp;">
-                hello@divifinancialadvisor.com&nbsp;
-              </a>
-            </p>
-            <p>
-              5678 Extra Rd. #123
-              <br /> San Francisco, CA 94122
-            </p>
-          </div>
+          <p>
+            <a href="mailto:hello@divifinancialadvisor.com&nbsp;">
+              hello@divifinancialadvisor.com&nbsp;
+            </a>
+          </p>
+          <p>
+            5678 Extra Rd. #123
+            <br /> San Francisco, CA 94122
+          </p>
         </Box>
         <Box
           p="2.5rem"
@@ -59,6 +64,7 @@ const Contact = () => {
         </Box>
       </Flex>
       <Flex
+        flexWrap="wrap"
         py="3rem"
         maxW="1080px"
         mx="auto"
