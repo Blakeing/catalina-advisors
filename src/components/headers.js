@@ -83,21 +83,24 @@ const Headers = () => {
             pr={{ md: 4 }}
             className="hidden md:block md:ml-10 md:pr-4"
           >
-            <Link style={{ fontSize: "1.5rem" }} to="/about">
+            <Link style={{ fontSize: "1.5rem" }} to="/about/">
               ABOUT
             </Link>
             <Link
               style={{ marginLeft: "2rem", fontSize: "1.5rem" }}
-              to="/services"
+              to="/services/"
             >
               SERVICES
             </Link>
-            <Link style={{ marginLeft: "2rem", fontSize: "1.5rem" }} to="/blog">
+            <Link
+              style={{ marginLeft: "2rem", fontSize: "1.5rem" }}
+              to="/blog/"
+            >
               BLOG
             </Link>
             <Link
               style={{ marginLeft: "2rem", fontSize: "1.5rem" }}
-              to="/contact"
+              to="/contact/"
             >
               CONTACT
             </Link>
