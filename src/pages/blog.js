@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Flex, Image } from "@chakra-ui/core"
+import { Box, Flex, Image, Stack, Button } from "@chakra-ui/core"
 import Headers from "../components/headers"
 import Typing from "../images/fa-contact.jpg"
 import One from "../images/fa-about-1.jpg"
@@ -67,7 +67,8 @@ const Blog = () => {
           </Box>
         </Flex>
       </Flex>
-      <Box maxW="1112px" mx="auto" w="100%">
+      <Box as="hr" mx="auto" maxW="1080px" />
+      <Box py="3.5rem" maxW="1112px" mx="auto" w="100%">
         <Box
           h="auto"
           d="grid"
@@ -78,68 +79,100 @@ const Blog = () => {
             <Flex
               flexDirection="column"
               justifyContent="space-between"
-              class="card yellow"
               maxW={{ base: `calc(100% - 2rem)`, lg: "320px" }}
             >
-              <Box>
-                <Image w="100%" height="200px" src={One} />
-              </Box>
-              <h3 m="0">Title - Card 1</h3>
-              <p contenteditable>
-                Medium length description with a few more words here.
-              </p>
-              <Box h="100px" w="100%" bg="teal.500"></Box>
+              <Stack spacing={4}>
+                <Box>
+                  <Image w="100%" height="200px" src={One} />
+                </Box>
+                <Box as="h3" m="0">
+                  Title - Card 1
+                </Box>
+                <Box as="p" contenteditable>
+                  Medium length description with a few more words here. Medium
+                  length description with a few more words here.
+                </Box>
+                <Flex justifyContent="flex-start">
+                  <Button variantColor="teal" px={4} py={2}>
+                    Read More
+                  </Button>
+                </Flex>
+              </Stack>
             </Flex>
           </Flex>
           <Flex justifyContent="center">
             <Flex
               flexDirection="column"
               justifyContent="space-between"
-              class="card yellow"
               maxW={{ base: `calc(100% - 2rem)`, lg: "320px" }}
             >
-              <Box>
-                <Image w="100%" height="200px" src={One} />
-              </Box>
-              <h3 m="0">Title - Card 1</h3>
-              <p contenteditable>
-                Medium length description with a few more words here.
-              </p>
-              <Box h="100px" w="100%" bg="teal.500"></Box>
+              <Stack spacing={4}>
+                <Box>
+                  <Image w="100%" height="200px" src={One} />
+                </Box>
+                <Box as="h3" m="0">
+                  Title - Card 1
+                </Box>
+                <Box as="p" contenteditable>
+                  Medium length description with a few more words here. Medium
+                  length description with a few more words here.
+                </Box>
+                <Flex justifyContent="flex-start">
+                  <Button variantColor="teal" px={4} py={2}>
+                    Read More
+                  </Button>
+                </Flex>
+              </Stack>
             </Flex>
           </Flex>
           <Flex justifyContent="center">
             <Flex
               flexDirection="column"
               justifyContent="space-between"
-              class="card yellow"
               maxW={{ base: `calc(100% - 2rem)`, lg: "320px" }}
             >
-              <Box>
-                <Image w="100%" height="200px" src={One} />
-              </Box>
-              <h3 m="0">Title - Card 1</h3>
-              <p contenteditable>
-                Medium length description with a few more words here.
-              </p>
-              <Box h="100px" w="100%" bg="teal.500"></Box>
+              <Stack spacing={4}>
+                <Box>
+                  <Image w="100%" height="200px" src={One} />
+                </Box>
+                <Box as="h3" m="0">
+                  Title - Card 1
+                </Box>
+                <Box as="p" contenteditable>
+                  Medium length description with a few more words here. Medium
+                  length description with a few more words here.
+                </Box>
+                <Flex justifyContent="flex-start">
+                  <Button variantColor="teal" px={4} py={2}>
+                    Read More
+                  </Button>
+                </Flex>
+              </Stack>
             </Flex>
           </Flex>
           <Flex justifyContent="center">
             <Flex
               flexDirection="column"
               justifyContent="space-between"
-              class="card yellow"
               maxW={{ base: `calc(100% - 2rem)`, lg: "320px" }}
             >
-              <Box>
-                <Image w="100%" height="200px" src={One} />
-              </Box>
-              <h3 m="0">Title - Card 1</h3>
-              <p contenteditable>
-                Medium length description with a few more words here.
-              </p>
-              <Box h="100px" w="100%" bg="teal.500"></Box>
+              <Stack spacing={4}>
+                <Box>
+                  <Image w="100%" height="200px" src={One} />
+                </Box>
+                <Box as="h3" m="0">
+                  Title - Card 1
+                </Box>
+                <Box as="p" contenteditable>
+                  Medium length description with a few more words here. Medium
+                  length description with a few more words here.
+                </Box>
+                <Flex justifyContent="flex-start">
+                  <Button variantColor="teal" px={4} py={2}>
+                    Read More
+                  </Button>
+                </Flex>
+              </Stack>
             </Flex>
           </Flex>
         </Box>

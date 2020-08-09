@@ -1,7 +1,11 @@
 import React from "react"
 import { theme as chakraTheme } from "@chakra-ui/core"
 
-const fonts = { ...chakraTheme.fonts, mono: `'Menlo', monospace` }
+const fonts = {
+  ...chakraTheme.fonts,
+  heading: "spinnaker, sans-serif",
+  body: "jura, sans-serif",
+}
 
 // First, create an alias for breakpoints
 const breakpoints = ["30em", "48em", "62em", "80em"]

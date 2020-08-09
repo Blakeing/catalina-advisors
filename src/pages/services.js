@@ -1,15 +1,16 @@
 import React from "react"
 import { Box, Flex } from "@chakra-ui/core"
-import Headers from "../components/headers"
-import Typing from "../images/fa-contact.jpg"
+import SmallHeader from "../components/small-header"
+import Tree from "../images/tree-bg.jpg"
+import Features from "../components/features"
 
 const Services = () => {
   return (
     <>
-      <Headers />
+      <SmallHeader />
       <Flex
         style={{
-          backgroundImage: `linear-gradient(180deg,rgba(0,19,46,0.6) 0%,rgba(0,19,46,0.6) 50%), url(${Typing}) `,
+          backgroundImage: `url(${Tree}) `,
         }}
         mt="1.5rem"
         px="1rem"
@@ -28,6 +29,7 @@ const Services = () => {
           Services
         </Box>
       </Flex>
+      <Features />
     </>
   )
 }

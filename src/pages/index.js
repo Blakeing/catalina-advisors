@@ -1,12 +1,11 @@
 import React, { useContext } from "react"
 import SEO from "../components/seo"
-import planes from "../images/planes.png"
+import planes from "../images/cut-plane.png"
 import { ChakraDrawer } from "../components/ChakraDrawer"
 
 import { Box, Flex, useDisclosure, Button, Image } from "@chakra-ui/core"
 import { Link } from "gatsby"
 import Headers from "../components/headers"
-import Div100vh from "react-div-100vh"
 import { ScreenContext } from "../../screen-context"
 import ClientOnly from "../utils/ClientOnly"
 
@@ -23,12 +22,21 @@ function IndexPage() {
       />
       <ClientOnly>
         <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-        <Box h={msg.height} pos="relative" overflow="hidden" bg="transparent">
+        <Box
+          style={{
+            backgroundColor: "#000000",
+            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='30' viewBox='0 0 1000 120'%3E%3Cg fill='none' stroke='%23222' stroke-width='10' stroke-opacity='.5' %3E%3Cpath d='M-500 75c0 0 125-30 250-30S0 75 0 75s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 45c0 0 125-30 250-30S0 45 0 45s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 105c0 0 125-30 250-30S0 105 0 105s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 15c0 0 125-30 250-30S0 15 0 15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500-15c0 0 125-30 250-30S0-15 0-15s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3Cpath d='M-500 135c0 0 125-30 250-30S0 135 0 135s125 30 250 30s250-30 250-30s125-30 250-30s250 30 250 30s125 30 250 30s250-30 250-30'/%3E%3C/g%3E%3C/svg%3E")`,
+          }}
+          h={msg.height}
+          pos="relative"
+          overflow="hidden"
+          bg="transparent"
+        >
           <Image
-            height={{ base: "auto", xl: "100%" }}
+            height={{ base: "auto" }}
             pos="absolute"
-            bottom={{ base: "-2rem", md: "-6rem", lg: "-7rem", xl: "-7rem" }}
-            right={{ base: "-3rem", md: "0", lg: "-13rem", xl: "0rem" }}
+            bottom={{ base: "-2rem", md: "-6rem", lg: "-7rem", xl: "-9rem" }}
+            right={{ base: "-3rem", md: "0", lg: "-13rem", xl: "-26rem" }}
             zIndex={1}
             src={planes}
           />
@@ -70,122 +78,6 @@ function IndexPage() {
                 </Button>
               </Box>
             </Flex>
-          </Box>
-        </Box>
-        <Box py={{ base: "86px", lg: "180px" }} bg="black">
-          <Box maxW="1280px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
-            <Box
-              as="h2"
-              fontWeight="600"
-              color="#979dad"
-              fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
-              mb=".25em"
-            >
-              Commercial Finance Solutions
-            </Box>
-            <Box
-              as="h3"
-              fontWeight="600"
-              color="white"
-              fontSize={{ base: "2.5rem", md: "4rem" }}
-              mb=".5em"
-              lineHeight="1"
-            >
-              Extensive Relationships.
-            </Box>
-            <Box
-              as="p"
-              fontSize={{ base: "19px", md: "21px" }}
-              letterSpacing=".012em"
-              color="#c7cdde"
-            >
-              All growing businesses need capital. At times, it can be difficult
-              for a management team to know where to turn to finance an
-              expansion, acquisition, or even working capital growth. Catalina
-              can help. We have extensive relationships with capital providers
-              of all forms and can help your business partner with the right
-              group for your needs. Our goal is to alleviate the complexity
-              surrounding the financing demands for your business.
-            </Box>
-          </Box>
-        </Box>
-        <Box py={{ base: "86px", lg: "180px" }} bg="#404654">
-          <Box maxW="1280px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
-            <Box
-              as="h2"
-              fontWeight="600"
-              color="#979dad"
-              fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
-              mb=".25em"
-            >
-              Bank Loan Restructuring
-            </Box>
-            <Box
-              as="h3"
-              fontWeight="600"
-              color="white"
-              fontSize={{ base: "2.5rem", md: "4rem" }}
-              mb=".5em"
-              lineHeight="1"
-            >
-              Proven Strategies.
-            </Box>
-            <Box
-              as="p"
-              fontSize={{ base: "19px", md: "21px" }}
-              letterSpacing=".012em"
-              color="#c7cdde"
-            >
-              When a business experiences softness in the market, it can be
-              difficult for management to work with existing lenders. Not only
-              must a management team continue to operate the business in a tough
-              environment, but it must also be concerned about its bank!
-              Catalina can help. We are owned and operated by former bankers and
-              are experienced in working through challenging loan situations.
-              Whether you simply need another voice in the room or need Catalina
-              to take the lead on a full restructuring process, we help
-              companies navigate the difficulties associated with loan
-              modification and restructuring.
-            </Box>
-          </Box>
-        </Box>
-        <Box py={{ base: "86px", lg: "180px" }} bg="black">
-          <Box maxW="1280px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
-            <Box
-              as="h2"
-              fontWeight="600"
-              color="#979dad"
-              fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
-              mb=".25em"
-            >
-              Lender Management
-            </Box>
-            <Box
-              as="h3"
-              fontWeight="600"
-              color="white"
-              fontSize={{ base: "2.5rem", md: "4rem" }}
-              mb=".5em"
-              lineHeight="1"
-            >
-              Deep Expertise.
-            </Box>
-            <Box
-              as="p"
-              fontSize={{ base: "19px", md: "21px" }}
-              letterSpacing=".012em"
-              color="#c7cdde"
-            >
-              Management teams get pulled in many different directions. It can
-              be difficult to prioritize your bank reporting over other
-              operational demands of your business, which can cause tension
-              between you and your lender. Catalina can help. We do the heavy
-              lifting when it comes to your bank’s financial reporting,
-              compliance, and borrowing base requirements. Also, we assist
-              management teams in identifying performance trends, addressing
-              liquidity constraints, and remaining in full compliance of all
-              loan reporting requirements.
-            </Box>
           </Box>
         </Box>
       </ClientOnly>

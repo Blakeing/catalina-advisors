@@ -28,6 +28,27 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Spinnaker",
+            },
+            {
+              family: "Jura",
+            },
+            {
+              family: "Nunito",
+            },
+            {
+              family: "Montserrat",
+            },
+          ],
+        },
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

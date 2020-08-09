@@ -38,7 +38,7 @@ const Headers = () => {
                     href="#"
                     aria-label="Home"
                     fontSize={{ base: "3rem", md: "4rem" }}
-                    fontWeight="600"
+                    fontFamily="spinnaker"
                   >
                     <Link to="/">CATALINA</Link>
                     <br />
@@ -50,7 +50,7 @@ const Headers = () => {
                     lineHeight="1"
                     fontSize={{ base: "1.5rem", md: "1.85rem" }}
                     textTransform="capitalize"
-                    fontWeight="600"
+                    fontFamily="spinnaker"
                   >
                     <Link to="/">ADVISORS</Link>
                   </Box>
@@ -83,23 +83,38 @@ const Headers = () => {
             pr={{ md: 4 }}
             className="hidden md:block md:ml-10 md:pr-4"
           >
-            <Link style={{ fontSize: "1.5rem" }} to="/about/">
+            <Link
+              style={{ fontSize: "1.5rem", fontFamily: "spinnaker" }}
+              to="/about/"
+            >
               ABOUT
             </Link>
             <Link
-              style={{ marginLeft: "2rem", fontSize: "1.5rem" }}
+              style={{
+                marginLeft: "2rem",
+                fontSize: "1.5rem",
+                fontFamily: "spinnaker",
+              }}
               to="/services/"
             >
               SERVICES
             </Link>
             <Link
-              style={{ marginLeft: "2rem", fontSize: "1.5rem" }}
+              style={{
+                marginLeft: "2rem",
+                fontSize: "1.5rem",
+                fontFamily: "spinnaker",
+              }}
               to="/blog/"
             >
               BLOG
             </Link>
             <Link
-              style={{ marginLeft: "2rem", fontSize: "1.5rem" }}
+              style={{
+                marginLeft: "2rem",
+                fontSize: "1.5rem",
+                fontFamily: "spinnaker",
+              }}
               to="/contact/"
             >
               CONTACT
