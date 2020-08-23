@@ -1,7 +1,6 @@
 import React from "react"
 import Tree from "../images/tree-bg.jpg"
 import People from "../images/people-overlay.png"
-//import { Override, Data, motionValue, useTransform } from "framer"
 import {
   motion,
   useViewportScroll,
@@ -10,6 +9,7 @@ import {
 } from "framer-motion"
 import { useWindowScroll } from "react-use"
 import TeamMember from "../components/TeamMember"
+import "../styles/seq.css"
 
 const Seq = () => {
   const { scrollYProgress, scrollY } = useViewportScroll()
