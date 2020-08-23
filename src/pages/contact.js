@@ -3,14 +3,7 @@ import { Box, Flex, Image, Input, Button, Stack } from "@chakra-ui/core"
 import Headers from "../components/headers"
 import Typing from "../images/fa-contact.jpg"
 import Form from "../images/fa-contact-form.jpg"
-import {
-  Textarea,
-  PseudoBox,
-  FormControl,
-  FormLabel,
-  FormErrorMessage,
-  FormHelperText,
-} from "@chakra-ui/core"
+import { Textarea, FormControl, FormLabel } from "@chakra-ui/core"
 
 const Contact = () => {
   return (

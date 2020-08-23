@@ -1,18 +1,28 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { Box, Flex, Button, useDisclosure } from "@chakra-ui/core"
 import { ChakraDrawer } from "../components/ChakraDrawer"
 import { Link } from "gatsby"
-import { DarkModeSwitch } from "./DarkModeSwitch"
+import { useWindowScroll } from "react-use"
+import {
+  motion,
+  useViewportScroll,
+  useMotionValue,
+  useTransform,
+} from "framer-motion"
 
-const SmallHeader = () => {
+const Tit = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
+  const x = useMotionValue(0)
+  const background = useTransform(x, [ 0, 100], [ "#60F", "#0BF"])
+
+  const { scrollYProgress } = useViewportScroll()
 
   return (
     <>
-      <DarkModeSwitch />
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
-      <Box pt="6" px={{ base: 4, sm: 6, lg: 8 }}>
+
+      <Box bg="red.500" py="6" px={{ base: 4, sm: 6, lg: 8 }}>
         <Flex
           as="nav"
           alignItems="center"
@@ -111,8 +121,53 @@ const SmallHeader = () => {
           </Box>
         </Flex>
       </Box>
+      <Flex alignItems="center" justify="center" style={{ height: 1000 }}>
+        <Box
+          as={motion.div}
+          w="100%"
+          h="100%"
+          animate={{ backgroundColor: background}}
+          // animate={{
+          //   backgroundColor: `rgba("255, 234, 20, ${scrollYProgress}")`,
+          // }}
+          // style={{
+          //   scaleX: scrollYProgress,
+          // }}
+        >
+          <Box as="h1" fontSize="4rem">
+            aihsfdadshf;ais
+          </Box>
+        </Box>
+      </Flex>
+      <motion.div
+        style={{
+          width: "100%",
+          height: "100%",
+          backgroundColor: background,
+          display: "flex",
+          placeItems: "center",
+          placeContent: "center",
+        }}
+      >
+        <motion.div
+          style={{
+            width: 150,
+            height: 150,
+            borderRadius: 75,
+            backgroundColor: "#fff",
+            x: x,
+            cursor: "grab",
+          }}
+          drag="x"
+          dragConstraints={{
+            right: 0,
+            left: 0,
+          }}
+          whileTap={{ cursor: "grabbing" }}
+        />
+      </motion.div>
     </>
   )
 }
 
-export default SmallHeader
+export default Tit

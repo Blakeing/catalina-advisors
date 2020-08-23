@@ -8,7 +8,6 @@ import {
   DrawerOverlay,
   DrawerContent,
   DrawerCloseButton,
-  Input,
   Button,
 } from "@chakra-ui/core"
 import { Link } from "gatsby"

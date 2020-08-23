@@ -2,11 +2,10 @@ import React from "react"
 import SEO from "../components/seo"
 
 import { ChakraDrawer } from "../components/ChakraDrawer"
-import { Box, Flex, useDisclosure, Button, Image } from "@chakra-ui/core"
-import { Link } from "gatsby"
+import { Box, useDisclosure } from "@chakra-ui/core"
 
 function IndexPage() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
 
   return (

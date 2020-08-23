@@ -42,7 +42,6 @@ const Blog = () => {
           w={{ base: "100%", lg: "60%" }}
           as="a"
           mb="0"
-          w="50%"
           color="white"
           fontWeight="600"
         >

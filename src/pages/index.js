@@ -10,7 +10,7 @@ import { ScreenContext } from "../../screen-context"
 import ClientOnly from "../utils/ClientOnly"
 
 function IndexPage() {
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onClose } = useDisclosure()
   const btnRef = React.useRef()
   const msg = useContext(ScreenContext)
 
