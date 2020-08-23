@@ -17,17 +17,19 @@ const Services = () => {
         h="250px"
         w="100%"
         alignItems="center"
+        justifyContent="center"
       >
-        <Box
+        <Flex
           w="100%"
-          color="white"
-          fontWeight="600"
+          color="black"
           maxW="1080px"
-          mx="auto"
-          fontSize={{ base: "3rem", md: "6rem" }}
+          fontSize={{ base: "3rem", md: "4.5rem" }}
+          justifyContent="center"
+          fontFamily="spinnaker
+        "
         >
-          Services
-        </Box>
+          SERVICES
+        </Flex>
       </Flex>
       <Features />
     </>

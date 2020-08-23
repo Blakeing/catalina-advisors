@@ -1,6 +1,5 @@
 import React from "react"
 import Tree from "../images/tree-bg.jpg"
-import People from "../images/people-overlay.png"
 import {
   motion,
   useViewportScroll,
@@ -10,10 +9,12 @@ import {
 import { useWindowScroll } from "react-use"
 import TeamMember from "../components/TeamMember"
 import "../styles/seq.css"
+import { Box, Flex } from "@chakra-ui/core"
+import { Link } from "gatsby"
 
-const Seq = () => {
+const Seq2 = () => {
   const { scrollYProgress, scrollY } = useViewportScroll()
-  const { x, y } = useWindowScroll()
+  const { y } = useWindowScroll()
 
   const windowHeight = useMotionValue(y)
 
@@ -24,14 +25,20 @@ const Seq = () => {
   return (
     <>
       <div className="main-logo -home js-main-logo  -show">
-        <a href="/">
-          <img
-            width="149"
-            height="21"
-            className="nav _logo _green"
-            src="https://d33wubrfki0l68.cloudfront.net/ab0c562df0efa9d35aee5ead288f4a96ec43c25a/e77b4/img/sequoia-mark-full-green.svg"
-          />
-        </a>
+        <Box
+          as="h1"
+          lineHeight="1"
+          textTransform="capitalize"
+          href="#"
+          aria-label="Home"
+          fontSize={{ base: "1.5rem" }}
+          fontFamily="spinnaker"
+          color="black"
+          fontWeight="900"
+        >
+          <Link to="/">CATALINA</Link>
+          <br />
+        </Box>
       </div>
       <div
         className={
@@ -72,32 +79,17 @@ const Seq = () => {
               style={{ top: 0 }}
               className="_header-content js-people-header-content hs-header-content"
             >
-              <span className="js-current-button _section-button -headline -bold -black -active">
-                <a href="/people/" className="_filter-button -pointer">
-                  Seed / Early
-                </a>
-              </span>
-
-              <span className="js-current-button _section-button -headline -bold -black ">
-                <a href="/people/growth/" className="_filter-button -pointer">
-                  Growth
-                </a>
-              </span>
-
-              <span className="js-current-button _section-button -headline -bold -black ">
-                <a
-                  href="/people/specialists/"
-                  className="_filter-button -pointer"
-                >
-                  Specialists
-                </a>
-              </span>
-
-              <span className="js-current-button _section-button -headline -bold -black ">
-                <a href="/people/ethos/" className="_filter-button -pointer">
-                  Ethos
-                </a>
-              </span>
+              <Flex
+                w="100%"
+                color="black"
+                maxW="1080px"
+                fontSize={{ base: "3rem" }}
+                justifyContent="center"
+                fontFamily="spinnaker"
+                mx="auto"
+              >
+                SERVICES
+              </Flex>
             </motion.div>
           </div>
           <div
@@ -131,4 +123,4 @@ const Seq = () => {
   )
 }
 
-export default Seq
+export default Seq2

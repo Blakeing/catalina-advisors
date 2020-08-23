@@ -2,7 +2,6 @@ import React from "react"
 import { Box, Flex, Button, useDisclosure } from "@chakra-ui/core"
 import { ChakraDrawer } from "../components/ChakraDrawer"
 import { Link } from "gatsby"
-import { DarkModeSwitch } from "./DarkModeSwitch"
 
 const SmallHeader = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
@@ -10,7 +9,6 @@ const SmallHeader = () => {
 
   return (
     <>
-      <DarkModeSwitch />
       <ChakraDrawer btnRef={btnRef} isOpen={isOpen} onClose={onClose} />
       <Box pt="6" px={{ base: 4, sm: 6, lg: 8 }}>
         <Flex
@@ -39,6 +37,7 @@ const SmallHeader = () => {
                     aria-label="Home"
                     fontSize={{ base: "3rem" }}
                     fontFamily="spinnaker"
+                    color="white"
                   >
                     <Link to="/">CATALINA</Link>
                     <br />

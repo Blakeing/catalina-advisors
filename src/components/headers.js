@@ -37,6 +37,7 @@ const Headers = () => {
                     aria-label="Home"
                     fontSize={{ base: "3rem", md: "4rem" }}
                     fontFamily="spinnaker"
+                    color="white"
                   >
                     <Link to="/">CATALINA</Link>
                     <br />
@@ -49,6 +50,7 @@ const Headers = () => {
                     fontSize={{ base: "1.5rem", md: "1.85rem" }}
                     textTransform="capitalize"
                     fontFamily="spinnaker"
+                    color="white"
                   >
                     <Link to="/">ADVISORS</Link>
                   </Box>
