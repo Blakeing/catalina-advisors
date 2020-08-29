@@ -40,10 +40,10 @@ module.exports = {
               family: "Jura",
             },
             {
-              family: "Nunito",
+              family: "Cormorant Garamond",
             },
             {
-              family: "Montserrat",
+              family: "Lato",
             },
           ],
         },

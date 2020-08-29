@@ -102,7 +102,7 @@ body {
 
 .people._section-nav {
   text-align: center;
-  padding-top: 160px;
+  padding-top: 131px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -146,13 +146,21 @@ body {
   color: #2d292a;
 }
 
+.-white,
+.nav {
+  color: white;
+}
+
 .nav._nav-links {
   list-style-type: none;
   margin: 0;
-  padding: 5px 0 0;
+  padding: 10px 0 0;
   float: right;
   z-index: 500;
   position: relative;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-family: lato;
 }
 
 .nav._nav-links li {
@@ -166,8 +174,13 @@ body {
   transition: border-color 0.2s linear;
 }
 
+.-scrolled {
+  color: #00205b;
+}
+
 .nav._container.-show {
   opacity: 1;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .main-logo {

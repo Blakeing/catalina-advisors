@@ -41,7 +41,11 @@ const Seq = () => {
         }
       >
         <div className="nav _right js-nav-right">
-          <ul className="nav _nav-links -black">
+          <ul
+            className={
+              y < 300 ? "nav _nav-links -black" : "nav _nav-links -scrolled"
+            }
+          >
             <li className="-active">
               <a href="/people/">People</a>
             </li>

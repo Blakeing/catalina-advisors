@@ -1,5 +1,5 @@
 import React from "react"
-import Tree from "../images/tree-bg.jpg"
+import Tree from "../images/rice-bg-dark.png"
 import {
   motion,
   useViewportScroll,
@@ -13,7 +13,7 @@ import "../styles/seq.css"
 import { Box, Flex } from "@chakra-ui/core"
 import { Link } from "gatsby"
 
-const Seq2 = () => {
+const Seq3 = () => {
   const { scrollYProgress, scrollY } = useViewportScroll()
   const { y } = useWindowScroll()
 
@@ -27,15 +27,14 @@ const Seq2 = () => {
     <>
       <div className="main-logo -home js-main-logo  -show">
         <Box
+          className={y < 300 ? "-white" : "-scrolled"}
           as="h1"
           lineHeight="1"
           textTransform="capitalize"
           href="#"
           aria-label="Home"
           fontSize={{ base: "1.5rem" }}
-          fontFamily="spinnaker"
-          color="#00205B"
-          fontWeight="900"
+          fontFamily="Cormorant Garamond"
           letterSpacing=".25em"
         >
           <Link to="/">CATALINA</Link>
@@ -50,7 +49,11 @@ const Seq2 = () => {
         }
       >
         <div className="nav _right js-nav-right">
-          <ul className="nav _nav-links -black">
+          <ul
+            className={
+              y < 300 ? "nav _nav-links -white" : "nav _nav-links -scrolled"
+            }
+          >
             <li className="-active">
               <a href="/people/">About</a>
             </li>
@@ -69,6 +72,7 @@ const Seq2 = () => {
             style={{
               position: "fixed",
               display: "inherit",
+              backgroundSize: "contain",
               backgroundImage: `url(${Tree})`,
             }}
             className="people  _section-nav  js-people-header hs-header -intro -hs-larger"
@@ -83,14 +87,17 @@ const Seq2 = () => {
               <Flex
                 w="100%"
                 h="100%"
-                color="black"
+                color="white"
                 maxW="1080px"
                 fontSize={{ base: "3rem" }}
                 justifyContent="center"
-                fontFamily="spinnaker"
+                fontFamily="Cormorant Garamond"
                 mx="auto"
+                letterSpacing=".1em"
               >
-                SERVICES
+                <span style={{ color: "white" }}>Our</span>
+                &nbsp;
+                <span style={{ color: "#afd4ee" }}>Services</span>
               </Flex>
             </motion.div>
           </div>
@@ -109,20 +116,20 @@ const Seq2 = () => {
               <Box maxW="1024px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
                 <Box
                   as="h2"
-                  color="#979dad"
                   fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
                   mb=".25em"
-                  fontFamily="spinnaker"
+                  color="#00205B"
+                  fontFamily="Cormorant Garamond"
                 >
                   Commercial Finance Solutions
                 </Box>
                 <Box
                   as="h3"
-                  color="black"
+                  color="#034EA1"
                   fontSize={{ base: "2.5rem", md: "4rem" }}
                   mb=".5em"
                   lineHeight="1"
-                  fontFamily="spinnaker"
+                  fontFamily="Cormorant Garamond"
                 >
                   Extensive Relationships.
                 </Box>
@@ -130,7 +137,8 @@ const Seq2 = () => {
                   as="p"
                   fontSize={{ base: "19px", md: "21px" }}
                   letterSpacing=".012em"
-                  color="#c7cdde"
+                  color="#4D4D4F"
+                  fontFamily="Cormorant Garamond"
                 >
                   All growing businesses need capital. At times, it can be
                   difficult for a management team to know where to turn to
@@ -154,20 +162,20 @@ const Seq2 = () => {
               <Box maxW="1024px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
                 <Box
                   as="h2"
-                  color="00205b"
+                  color="#00205b"
                   fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
                   mb=".25em"
-                  fontFamily="spinnaker"
+                  fontFamily="Cormorant Garamond"
                 >
                   Commercial Finance Solutions
                 </Box>
                 <Box
                   as="h3"
-                  color="black"
+                  color="#034EA1"
                   fontSize={{ base: "2.5rem", md: "4rem" }}
                   mb=".5em"
                   lineHeight="1"
-                  fontFamily="spinnaker"
+                  fontFamily="Cormorant Garamond"
                   color="#034ea1"
                 >
                   Extensive Relationships.
@@ -177,6 +185,7 @@ const Seq2 = () => {
                   fontSize={{ base: "19px", md: "21px" }}
                   letterSpacing=".012em"
                   color="#4d4d4f"
+                  fontFamily="Cormorant Garamond"
                 >
                   All growing businesses need capital. At times, it can be
                   difficult for a management team to know where to turn to
@@ -199,20 +208,20 @@ const Seq2 = () => {
               <Box maxW="1024px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
                 <Box
                   as="h2"
-                  color="#979dad"
                   fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
                   mb=".25em"
-                  fontFamily="spinnaker"
+                  color="#00205B"
+                  fontFamily="Cormorant Garamond"
                 >
                   Commercial Finance Solutions
                 </Box>
                 <Box
                   as="h3"
-                  color="black"
+                  color="#034EA1"
                   fontSize={{ base: "2.5rem", md: "4rem" }}
                   mb=".5em"
                   lineHeight="1"
-                  fontFamily="spinnaker"
+                  fontFamily="Cormorant Garamond"
                 >
                   Extensive Relationships.
                 </Box>
@@ -220,7 +229,8 @@ const Seq2 = () => {
                   as="p"
                   fontSize={{ base: "19px", md: "21px" }}
                   letterSpacing=".012em"
-                  color="#c7cdde"
+                  color="#4D4D4F"
+                  fontFamily="Cormorant Garamond"
                 >
                   All growing businesses need capital. At times, it can be
                   difficult for a management team to know where to turn to
@@ -240,4 +250,4 @@ const Seq2 = () => {
   )
 }
 
-export default Seq2
+export default Seq3
