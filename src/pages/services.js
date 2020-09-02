@@ -23,7 +23,7 @@ const Services = () => {
           w="100%"
           color="black"
           maxW="1080px"
-          fontSize={{ base: "3rem", md: "4.5rem" }}
+          fontSize={{ base: "3.5rem" }}
           justifyContent="center"
           fontFamily="spinnaker
         "

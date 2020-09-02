@@ -34,7 +34,7 @@ const Seq2 = () => {
           aria-label="Home"
           fontSize={{ base: "1.5rem" }}
           fontFamily="spinnaker"
-          color="#00205B"
+          color="#000"
           fontWeight="900"
           letterSpacing=".25em"
         >
@@ -50,7 +50,7 @@ const Seq2 = () => {
         }
       >
         <div className="nav _right js-nav-right">
-          <ul className="nav _nav-links -black">
+          <ul style={{ color: "black" }} className="nav _nav-links -black">
             <li className="-active">
               <a href="/people/">About</a>
             </li>
@@ -109,7 +109,7 @@ const Seq2 = () => {
               <Box maxW="1024px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
                 <Box
                   as="h2"
-                  color="#979dad"
+                  color="#1d1d1f"
                   fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
                   mb=".25em"
                   fontFamily="spinnaker"
@@ -130,7 +130,7 @@ const Seq2 = () => {
                   as="p"
                   fontSize={{ base: "19px", md: "21px" }}
                   letterSpacing=".012em"
-                  color="#c7cdde"
+                  color="#86868b"
                 >
                   All growing businesses need capital. At times, it can be
                   difficult for a management team to know where to turn to
@@ -148,13 +148,13 @@ const Seq2 = () => {
                 visibility: "visible",
                 paddingTop: 90,
                 paddingBottom: 90,
-                backgroundColor: "#d7e3ed",
+                backgroundColor: "#FAFAFA",
               }}
             >
               <Box maxW="1024px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
                 <Box
                   as="h2"
-                  color="00205b"
+                  color="#1d1d1f"
                   fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
                   mb=".25em"
                   fontFamily="spinnaker"
@@ -168,7 +168,6 @@ const Seq2 = () => {
                   mb=".5em"
                   lineHeight="1"
                   fontFamily="spinnaker"
-                  color="#034ea1"
                 >
                   Extensive Relationships.
                 </Box>
@@ -176,7 +175,7 @@ const Seq2 = () => {
                   as="p"
                   fontSize={{ base: "19px", md: "21px" }}
                   letterSpacing=".012em"
-                  color="#4d4d4f"
+                  color="#86868b"
                 >
                   All growing businesses need capital. At times, it can be
                   difficult for a management team to know where to turn to
@@ -199,7 +198,7 @@ const Seq2 = () => {
               <Box maxW="1024px" mx="auto" px={{ base: "1rem", lg: "2rem" }}>
                 <Box
                   as="h2"
-                  color="#979dad"
+                  color="#1d1d1f"
                   fontSize={{ base: "1.3125rem", md: "2.3125rem" }}
                   mb=".25em"
                   fontFamily="spinnaker"
@@ -220,7 +219,7 @@ const Seq2 = () => {
                   as="p"
                   fontSize={{ base: "19px", md: "21px" }}
                   letterSpacing=".012em"
-                  color="#c7cdde"
+                  color="#86868b"
                 >
                   All growing businesses need capital. At times, it can be
                   difficult for a management team to know where to turn to
